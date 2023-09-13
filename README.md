@@ -4,8 +4,9 @@ Stacks include:
   - `aizo_quadrotor_slam`: 2D SLAM based on CaroGrapher and TEB motion planning
   - `oj_detection`: tracker and extracted object, real-time object detection using the Ultralytics YOLO
 Check each package for more details.
-![Our proposed:](https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/proposed_system.png?raw=true)
-Our proposed: <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/proposed_system.png" width="450px">
+
+# Our proposed:
+<img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/proposed_system.png" width="450px">
 
 Citation: 
 ```
