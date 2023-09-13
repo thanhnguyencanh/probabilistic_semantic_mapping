@@ -1,0 +1,40 @@
+<launch>
+  <arg name="base_name"         default="quadrotor"/>
+
+  <!--original depth image to laser scan-->
+  <!-- <node name= "depthimage_to_laserscan" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan">
+    <remap from="image"    to="/$(arg base_name)/camera/depth/image_rect_raw"/>
+    <remap from="camera_info"    to="/$(arg base_name)/camera/depth/camera_info"/>
+  </node> -->
+
+
+  <!--detection point cloud to laser scan-->
+  <!-- <node name= "pointcloud_to_laserscan_node" pkg="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node">
+    <remap from="cloud_in"    to="projection_cloud"/>
+    <remap from="scan"    to="camera/scan"/>
+  </node> -->
+
+   <!-- Start Google Cartographer node with custom configuration file-->
+  <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="
+        -configuration_directory
+            $(find aizo_quadrotor_slam)/configuration_files
+        -configuration_basename aizo_quadrotor_2d.lua" output="screen">
+        <remap from="scan" to="/quadrotor/laser/scan"/>
+        <!-- <remap from="odom" to="/quadrotor/raw_odom" /> -->
+  </node>
+
+		<!-- Additional node which converts Cartographer map into ROS occupancy grid map. Not used and can be skipped in this case -->
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+   <!-- Run the costmap node -->
+  <!-- <node name="costmap_node" pkg="costmap_2d" type="costmap_2d_node" >
+    <rosparam file="$(find aizo_quadrotor_slam)/param/costmap2d.yaml" command="load" ns="costmap" />
+  </node> -->
+
+  <!-- Start RViz with custom view -->
+  <node pkg="rviz" type="rviz" name="show_rviz" args="-d $(find aizo_quadrotor_slam)/rviz/aizoquadrotor.rviz"/>  
+
+  <!-- Start Move base node -->
+  <!-- <include file="$(find aizo_quadrotor_slam)/launch/move_base.launch" /> -->
+
+</launch>
