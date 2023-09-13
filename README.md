@@ -10,6 +10,10 @@ Check each package for more details.
 # Our proposed:
 <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/proposed_system.png" width="450px">
 
+|  `input image`  |  `point cloud`  | `tracker object`  |  `cluster point`  | `traditional map`  |  `semantic map`  |
+| :------------: | :-----------------------: | :------------: | :-----------------------: | :------------: | :-----------------------: |
+| <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/input1.png" width="150px"> | <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/point1.png" width="150px"> | <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/detect1.png" width="150px"> | <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/cluster1.png" width="150px"> | <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/metricavoid1.png" width="150px"> | <img src="https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping/blob/main/image/ouravoid2.png" width="150px">|
+
 Citation: 
 ```
 Object-Oriented Semantic Mapping for Reliable UAVs Navigation, ICCAIS 2023
@@ -23,6 +27,28 @@ $ python3 -m pip install -r ultralytics_ros/requirements.txt
 $ cd ~/catkin_ws
 $ rosdep install -r -y -i --from-paths .
 $ catkin build
+```
+
+## Requirements
+Requirements
+ - `ros` (indigo+)
+ - `gazebo` (2.2+)
+ - `gazebo_ros` (2.2+)
+ - `quadrotor_control` [KumarRobotics](https://github.com/KumarRobotics/quadrotor_control)
+ - `qudrotor_msgs` [KumarRobotics](https://github.com/KumarRobotics/kr_planning_msgs)
+ - `waypoint_navigation` [](https://github.com/KumarRobotics/waypoint_navigation_plugin).
+ - `aizo_quadrotor` [NCT](https://github.com/NguyenCanhThanh/aizo_quadrotor.git)
+
+## Step 1: Custom dataset
+## Step 2: SLAm node
+
+```
+- CartoGrapher build static map
+roslaunch aizo_quadrotor_slam 2dslam.launch
+
+- Move based navigation using TEB
+
+roslaunch aizo_quadrotor_slam move_base.launch 
 ```
 
 ## `tracker_node`
