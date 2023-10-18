@@ -23,7 +23,7 @@ Object-Oriented Semantic Mapping for Reliable UAVs Navigation, ICCAIS 2023
 ```
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/NguyenCanhThanh/probabilistic_semantic_mapping.git
-$ python3 -m pip install -r ultralytics_ros/requirements.txt
+$ python3 -m pip install -r oj_detection/requirements.txt
 $ cd ~/catkin_ws
 $ rosdep install -r -y -i --from-paths .
 $ catkin build
