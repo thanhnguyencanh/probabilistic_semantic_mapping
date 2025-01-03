@@ -172,7 +172,7 @@ code {
        <tr>
         <td align=center width=100px>
         <center>
-        <span style="font-size:20px">School of Information Science, JAIST, Japan <br> VNU University of Engineering and Technology, Vietnam <br/><a href="https://sice-si.org/SII2024/">SII</a>, 2024.</span>
+        <span style="font-size:20px">School of Information Science, JAIST, Japan <br> VNU University of Engineering and Technology, Vietnam <br/> ICCAIS, 2023.</span>
         </center>
         </td>
      </tr>
@@ -184,12 +184,12 @@ code {
      <tr>
        <td align=center width=100px>
        <center>
-       <span style="font-size:20px"><a href="https://arxiv.org/pdf/2401.08134">[Paper]</a></span>
+       <span style="font-size:20px"><a href="https://arxiv.org/abs/2401.08132">[Paper]</a></span>
        </center>
        </td>
        <td align=center width=100px>
        <center>
-       <span style="font-size:20px"><a href="https://github.com/thanhnguyencanh/S3M_SLAM">[Code]</a></span>
+       <span style="font-size:20px"><a href="https://github.com/thanhnguyencanh/probabilistic_semantic_mapping">[Code]</a></span>
        </center>
        </td>
     
@@ -200,7 +200,7 @@ code {
             
 
             <br>
-            This paper presents a novel approach to address challenges in semantic information extraction and utilization within UAV operations. Our system integrates state-of-the-art visual SLAM to estimate a comprehensive 6-DoF pose and advanced object segmentation methods at the back end. To improve the computational and storage efficiency of the framework, we adopt a streamlined voxel-based 3D map representation - OctoMap to build a working system. Furthermore, the fusion algorithm is incorporated to obtain the semantic information of each frame from the front-end SLAM task, and the corresponding point. By leveraging semantic information, our framework enhances the UAV's ability to perceive and navigate through indoor spaces, addressing challenges in pose estimation accuracy and uncertainty reduction. Through Gazebo simulations, we validate the efficacy of our proposed system and successfully embed our approach into a Jetson Xavier AGX unit for real-world applications.
+            To autonomously navigate in real-world environments, special in search and rescue operations, Unmanned Aerial Vehicles (UAVs) necessitate comprehensive maps to ensure safety. However, the prevalent metric map often lacks semantic information crucial for holistic scene comprehension. In this paper, we proposed a system to construct a probabilistic metric map enriched with object information extracted from the environment from RGB-D images. Our approach combines a state-of-the-art YOLOv8-based object detection framework at the front end and a 2D SLAM method - CartoGrapher at the back end. To effectively track and position semantic object classes extracted from the front-end interface, we employ the innovative BoT-SORT methodology. A novel association method is introduced to extract the position of objects and then project it with the metric map. Unlike previous research, our approach takes into reliable navigating in the environment with various hollow bottom objects. The output of our system is a probabilistic map, which significantly enhances the map's representation by incorporating object-specific attributes, encompassing class distinctions, accurate positioning, and object heights. A number of experiments have been conducted to evaluate our proposed approach. The results show that the robot can effectively produce augmented semantic maps containing several objects (notably chairs and desks). Furthermore, our system is evaluated within an embedded computer - Jetson Xavier AGX unit to demonstrate the use case in real-world applications.
             <br><br>
 
       <hr>
@@ -211,11 +211,11 @@ code {
                     <!--<td width=300px align=left>-->
                     <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> -->
                   <!-- <td><a href="#"><img class="layered-paper-big" style="height:175px" src="./resources/images/paper.png"/></a></td> -->
-                  <td><a href="https://arxiv.org/pdf/2401.08134"><img style="height:400px" src="docs/images/thumbnails1.png"/></a></td>
-                  <td><span style="font-size:14pt">Thanh Nguyen Canh, Van-Truong Nguyen, Xiem HoangVan, Armagan Elibol, Nak Young Chong<br><br>
-                    S3M: Semantic Segmentation Sparse Mapping for UAVs with RGB-D Camera<br><br>
-                  SII 2024.<br><br>
-                      <a href="https://arxiv.org/abs/2401.08134">[pdf]</a> &nbsp; &nbsp;
+                  <td><a href="https://arxiv.org/pdf/2401.08132"><img style="height:400px" src="docs/images/thumbnails.png"/></a></td>
+                  <td><span style="font-size:14pt">Thanh Nguyen Canh, Armagan Elibol, Nak Young Chong, Xiem HoangVan<br><br>
+                    Object-Oriented Semantic Mapping for Reliable UAVs Navigation<br><br>
+                  ICCAIS 2024.<br><br>
+                      <a href="https://arxiv.org/pdf/2401.08132">[pdf]</a> &nbsp; &nbsp;
                    <!--    <a href="./resources/bibtex.txt">[Bibtex]</a> -->
                   <!-- [hosted on <a href="#">arXiv</a>]</a> -->
                     </td>
@@ -443,7 +443,7 @@ code {
          <center><h1>Code</h1></center>
             <table align=center width=800px>
               <tr><center> <br>
-                <span style="font-size:28px">&nbsp;<a href='https://github.com/thanhnguyencanh/S3M_SLAM'>[github]</a>
+                <span style="font-size:28px">&nbsp;<a href='https://github.com/thanhnguyencanh/probabilistic_semantic_mapping'>[github]</a>
 
                 <span style="font-size:28px"></a></span>
               <br>
@@ -481,7 +481,7 @@ code {
               <br>
               </center></tr> -->
               <tr><left> <br>
-                          <span style="font-size:18px">1.  Canh T. N., Nguyen V-T, HoangVan X., Elibol A., Chong A.Y. <a href='https://thanhnguyencanh.github.io/S3M_SLAM/'>S3M: Semantic Segmentation Sparse Mapping for UAVs with RGB-D Camera</a>. Symposium on System Integration (SII), 2024.
+                          <span style="font-size:18px">1.  Canh T. N., Nguyen V-T, HoangVan X., Elibol A., Chong A.Y. <a href='https://thanhnguyencanh.github.io/probabilistic_semantic_mapping/'>S3M: Semantic Segmentation Sparse Mapping for UAVs with RGB-D Camera</a>. Symposium on System Integration (SII), 2024.
 
                           
               <br><br>
